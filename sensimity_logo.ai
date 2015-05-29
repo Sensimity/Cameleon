@@ -1,0 +1,79 @@
+%!PS-Adobe-3.0
+%%Creator: Macromedia Fireworks MX 2004
+%%DocumentNeededResources: procset Adobe_level2_AI5 1.0 0
+%%+ procset Adobe_packedarray 2.0 0
+%%+ procset Adobe_cmykcolor 1.1 0
+%%+ procset Adobe_cshow 1.1 0
+%%+ procset Adobe_customcolor 1.0 0
+%%+ procset Adobe_typography_AI5 1.0 0
+%%+ procset Adobe_Illustrator_AI5 1.0 0
+%%BoundingBox:0 0 325 480
+%AI3_TemplateBox: 0 0 325 480
+%%PageOrigin:0 0
+%AI5_FileFormat 3
+%AI3_ColorUsage: Color
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%EndComments
+%%BeginProlog
+%%EndProlog
+%%BeginSetup
+Adobe_packedarray /initialize get exec
+Adobe_cmykcolor /initialize get exec
+Adobe_cshow /initialize get exec
+Adobe_customcolor /initialize get exec
+Adobe_typography_AI5 /initialize get exec
+Adobe_Illustrator_AI5 /initialize get exec
+%%EndSetup
+1 1 1 1 0 0 0 79 128 255 Lb
+(Background) Ln
+1.999750 w
+1 J
+1 j
+0.953 0.698 0.161 XA
+0.953 0.698 0.161 Xa
+6.00 366.95 m
+9.60 366.95 317.64 188.29 320.46 185.48 c
+321.05 184.89 322.14 99.66 321.46 98.99 c
+319.85 97.38 9.27 282.31 8.00 281.46 c
+6.50 280.46 6.00 366.95 6.00 366.95 c
+b
+1.999750 w
+1 J
+1 j
+0.255 0.259 0.255 XA
+0.255 0.259 0.255 Xa
+162.98 459.94 m
+163.62 459.68 320.46 367.95 320.46 367.95 c
+320.46 282.96 l
+314.57 282.96 162.83 376.63 162.48 376.45 c
+158.81 374.62 124.44 350.23 123.98 350.46 c
+121.73 351.58 51.99 392.45 51.99 392.45 c
+51.99 392.45 161.22 460.65 162.98 459.94 c
+b
+1.999750 w
+1 J
+1 j
+0.255 0.259 0.255 XA
+0.255 0.259 0.255 Xa
+165.48 7.00 m
+164.83 7.26 8.00 98.99 8.00 98.99 c
+8.00 183.98 l
+13.89 183.98 165.63 90.32 165.98 90.49 c
+169.65 92.33 204.02 116.72 204.47 116.49 c
+206.73 115.36 276.47 74.50 276.47 74.50 c
+276.47 74.50 167.24 6.30 165.48 7.00 c
+b
+LB
+1 1 1 1 0 0 0 79 128 255 Lb
+(Layer 1) Ln
+LB
+%%PageTrailer
+gsave annotatepage grestore showpage
+%%Trailer
+Adobe_Illustrator_AI5 /terminate get exec
+Adobe_typography_AI5 /terminate get exec
+Adobe_customcolor /terminate get exec
+Adobe_cshow /terminate get exec
+Adobe_cmykcolor /terminate get exec
+Adobe_packedarray /terminate get exec
+%%EOF
