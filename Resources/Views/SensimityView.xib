@@ -31,7 +31,7 @@
                         <constraint firstAttribute="height" constant="50" id="hF8-IR-roN"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Major id of advertising beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-nR-5ql" customClass="SensimityTextField">
+                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Major id of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-nR-5ql" customClass="SensimityTextField">
                     <rect key="frame" x="20" y="280" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>
@@ -43,7 +43,7 @@
                         <outlet property="delegate" destination="-1" id="iWO-vc-g0g"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minor id of advertising beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ewf-2x-pEZ" customClass="SensimityTextField">
+                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minor id of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ewf-2x-pEZ" customClass="SensimityTextField">
                     <rect key="frame" x="20" y="378" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>
@@ -106,7 +106,7 @@
                     <fontDescription key="fontDescription" name="Geogrotesque-Light" family="Geogrotesque" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UUID of advertising beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-ti-yfP" customClass="SensimityTextField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UUID of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-ti-yfP" customClass="SensimityTextField">
                     <rect key="frame" x="20" y="182" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>

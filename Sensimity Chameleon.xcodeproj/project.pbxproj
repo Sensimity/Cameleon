@@ -38,7 +38,6 @@
 		5060DBF31847A0A300E99EE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5060DBF81847A0A300E99EE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5060DBF91847A0A300E99EE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5060DC021847A0A400E99EE6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5060DC181847AAB200E99EE6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		5060DC1A1847AAB700E99EE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E76D1E271B14DA3E00183A5A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -53,7 +52,7 @@
 		E77D0FFF1B149FCE00F80588 /* SensimityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityView.h; sourceTree = "<group>"; };
 		E77D10001B149FCE00F80588 /* SensimityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityView.m; sourceTree = "<group>"; };
 		E77D10051B14B12C00F80588 /* Beacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beacon-Prefix.pch"; sourceTree = "<group>"; };
-		E77D10231B14B36500F80588 /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E77D10231B14B36500F80588 /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Beacon copy.app"; path = "/Users/williamrijksen/Enrise/Applications/Chameleon/build/Debug-iphoneos/Beacon copy.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,16 +79,7 @@
 				E77D10081B14B25100F80588 /* Views */,
 				E7813B371B0F63AA00FEFF70 /* Resources */,
 				5060DBE21847A0A300E99EE6 /* Frameworks */,
-				5060DBE11847A0A300E99EE6 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		5060DBE11847A0A300E99EE6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E77D10231B14B36500F80588 /* Beacon copy.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5060DBE21847A0A300E99EE6 /* Frameworks */ = {
@@ -100,7 +90,6 @@
 				5060DBE31847A0A300E99EE6 /* Foundation.framework */,
 				5060DBE51847A0A300E99EE6 /* CoreGraphics.framework */,
 				5060DBE71847A0A300E99EE6 /* UIKit.framework */,
-				5060DC021847A0A400E99EE6 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,7 +195,7 @@
 				Base,
 			);
 			mainGroup = 5060DBD71847A0A300E99EE6;
-			productRefGroup = 5060DBE11847A0A300E99EE6 /* Products */;
+			productRefGroup = 5060DBD71847A0A300E99EE6;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
