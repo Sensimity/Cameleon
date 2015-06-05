@@ -40,10 +40,7 @@
 - (IBAction)buttonClicked:(id)sender {
     if (_running) {
         [self.peripheralManager stopAdvertising];
-        [_toggleButton setTitle:@"START" forState:UIControlStateNormal];
-        [_toggleButton setTitleColor:[UIColor colorWithRed:0.325 green:0.337 blue:0.353 alpha:1] forState:UIControlStateNormal];
-        [_toggleButton setBackgroundColor:[UIColor colorWithRed:0.949 green:0.663 blue:0 alpha:1]];
-        _running = FALSE;
+        [self setToggleButtonStart];
     } else {
         // Create a NSUUID object
         NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:[_uuid text]];
@@ -60,11 +57,22 @@
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                                          queue:nil
                                                                        options:nil];
-        [_toggleButton setTitle:@"STOP" forState:UIControlStateNormal];
-        [_toggleButton setTitleColor:[UIColor colorWithRed:0.949 green:0.663 blue:0 alpha:1] forState:UIControlStateNormal];
-        [_toggleButton setBackgroundColor:[UIColor colorWithRed:0.325 green:0.337 blue:0.353 alpha:1]];
-        _running = TRUE;
+        [self setToggleButtonStop];
     }
+}
+
+-(void)setToggleButtonStart{
+    [_toggleButton setTitle:@"START" forState:UIControlStateNormal];
+    [_toggleButton setTitleColor:[UIColor colorWithRed:0.325 green:0.337 blue:0.353 alpha:1] forState:UIControlStateNormal];
+    [_toggleButton setBackgroundColor:[UIColor colorWithRed:0.949 green:0.663 blue:0 alpha:1]];
+    _running = FALSE;
+}
+
+-(void)setToggleButtonStop{
+    [_toggleButton setTitle:@"STOP" forState:UIControlStateNormal];
+    [_toggleButton setTitleColor:[UIColor colorWithRed:0.949 green:0.663 blue:0 alpha:1] forState:UIControlStateNormal];
+    [_toggleButton setBackgroundColor:[UIColor colorWithRed:0.325 green:0.337 blue:0.353 alpha:1]];
+    _running = TRUE;
 }
 
 // Handle start or stop advertising
@@ -78,14 +86,36 @@
     }
     else if (peripheral.state == CBPeripheralManagerStatePoweredOff)
     {
-        
+        [self shakeButton:_toggleButton withErrorMessage:@"BLUETOOTH IS NOT ENABLED"];
         // Bluetooth isn't on. Stop broadcasting
         [self.peripheralManager stopAdvertising];
     }
     else if (peripheral.state == CBPeripheralManagerStateUnsupported)
     {
+        [self shakeButton:_toggleButton withErrorMessage:@"IBEACONS NOT SUPPORTED"];
         // Unsupported
     }
+}
+
+- (void)shakeButton:(UIButton *)button withErrorMessage:(NSString *)text
+{
+    [UIView setAnimationsEnabled:NO];
+    [_toggleButton setBackgroundColor:[UIColor redColor]];
+    [_toggleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_toggleButton setTitle:text forState:UIControlStateNormal];
+    [UIView setAnimationsEnabled:YES];
+
+    [CATransaction begin];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    animation.duration = 0.05;
+    animation.byValue = @(5);
+    animation.autoreverses = YES;
+    animation.repeatCount = 10;
+    [CATransaction setCompletionBlock:^{
+        [self setToggleButtonStart];
+    }];
+    [button.layer addAnimation:animation forKey:@"Shake"];
+    [CATransaction commit];
 }
 
 /**
