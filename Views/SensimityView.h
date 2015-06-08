@@ -11,5 +11,9 @@
 @property (strong, nonatomic) NSDictionary *myBeaconData;
 @property (strong, nonatomic) CBPeripheralManager *peripheralManager;
 
+/**
+ * Constructor to sets the delegates and tapgestures
+ */
 - (void) construct;
+
 @end

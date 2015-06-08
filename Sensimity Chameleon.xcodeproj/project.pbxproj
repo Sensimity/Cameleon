@@ -25,6 +25,7 @@
 		E77D101C1B14B36500F80588 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5060DBEC1847A0A300E99EE6 /* InfoPlist.strings */; };
 		E77D101D1B14B36500F80588 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77D0FF01B147BB300F80588 /* Images.xcassets */; };
 		E77D101F1B14B36500F80588 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77D0FEC1B147B6F00F80588 /* Launch Screen.xib */; };
+		E7B86DB71B21D66C002C8A0D /* BeaconValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +53,9 @@
 		E77D0FFF1B149FCE00F80588 /* SensimityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityView.h; sourceTree = "<group>"; };
 		E77D10001B149FCE00F80588 /* SensimityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityView.m; sourceTree = "<group>"; };
 		E77D10051B14B12C00F80588 /* Beacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beacon-Prefix.pch"; sourceTree = "<group>"; };
-		E77D10231B14B36500F80588 /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Beacon copy.app"; path = "/Users/williamrijksen/Enrise/Applications/Chameleon/build/Debug-iphoneos/Beacon copy.app"; sourceTree = "<absolute>"; };
+		E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconValidator.h; path = Validators/BeaconValidator.h; sourceTree = "<group>"; };
+		E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconValidator.m; path = Validators/BeaconValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +80,10 @@
 				E77D10071B14B22F00F80588 /* Controllers */,
 				5060DBEA1847A0A300E99EE6 /* Supporting Files */,
 				E77D10081B14B25100F80588 /* Views */,
+				E7B86DB41B21D5B3002C8A0D /* Validators */,
 				E7813B371B0F63AA00FEFF70 /* Resources */,
 				5060DBE21847A0A300E99EE6 /* Frameworks */,
+				E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +162,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		E7B86DB41B21D5B3002C8A0D /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */,
+				E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,7 +188,7 @@
 			);
 			name = "Sensimity Chameleon";
 			productName = Beacon;
-			productReference = E77D10231B14B36500F80588 /* Beacon copy.app */;
+			productReference = E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B86DB71B21D66C002C8A0D /* BeaconValidator.m in Sources */,
 				E77D100C1B14B36500F80588 /* SensimityView.m in Sources */,
 				E77D100D1B14B36500F80588 /* ViewController.m in Sources */,
 				E77D100E1B14B36500F80588 /* SensimityTextField.m in Sources */,
