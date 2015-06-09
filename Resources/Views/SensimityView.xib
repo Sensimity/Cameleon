@@ -85,21 +85,6 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSL-Tk-Boh">
-                    <rect key="frame" x="20" y="384" width="276" height="40"/>
-                    <color key="backgroundColor" red="0.95294117649999999" green="0.69803921570000005" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="0lc-wV-JhV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Geogrotesque-Light" family="Geogrotesque" pointSize="18"/>
-                    <state key="normal" title="START">
-                        <color key="titleColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="buttonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="tza-1F-UTb"/>
-                    </connections>
-                </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="SENSIMITY CHAMELEON" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPi-TH-K7n">
                     <rect key="frame" x="20" y="95" width="276" height="35"/>
                     <constraints>
@@ -148,13 +133,27 @@
                     <color key="textColor" red="0.99607843139999996" green="0.21176470589999999" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSL-Tk-Boh">
+                    <rect key="frame" x="20" y="384" width="276" height="40"/>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.69803921570000005" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0lc-wV-JhV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Geogrotesque-Light" family="Geogrotesque" pointSize="18"/>
+                    <state key="normal" title="START">
+                        <color key="titleColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="tza-1F-UTb"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="sSL-Tk-Boh" firstAttribute="top" secondItem="Mqg-WV-VU0" secondAttribute="bottom" constant="16" id="0JP-dg-XLN"/>
                 <constraint firstItem="ewf-2x-pEZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="2eX-bR-VNk"/>
                 <constraint firstAttribute="trailing" secondItem="adb-6H-6ae" secondAttribute="trailing" constant="20" id="2s6-Fh-37T"/>
                 <constraint firstAttribute="trailing" secondItem="GkM-mU-yON" secondAttribute="trailing" constant="20" id="368-9p-WwY"/>
-                <constraint firstAttribute="bottom" secondItem="sSL-Tk-Boh" secondAttribute="bottom" priority="700" constant="68" id="6Pm-zq-hcA"/>
                 <constraint firstItem="N8G-nR-5ql" firstAttribute="top" secondItem="hn1-0b-dZi" secondAttribute="bottom" id="8l1-wC-O32"/>
                 <constraint firstItem="ewf-2x-pEZ" firstAttribute="top" secondItem="adb-6H-6ae" secondAttribute="bottom" id="9Vl-xv-vwu"/>
                 <constraint firstItem="N8G-nR-5ql" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="9qs-2E-qah"/>

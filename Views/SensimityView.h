@@ -8,7 +8,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface SensimityView : UIView<UITextFieldDelegate, MPGTextFieldDelegate, CBPeripheralManagerDelegate>
+@interface SensimityView : UIView<UITextFieldDelegate, CBPeripheralManagerDelegate>
 
 @property (strong, nonatomic) NSDictionary *myBeaconData;
 @property (strong, nonatomic) CBPeripheralManager *peripheralManager;

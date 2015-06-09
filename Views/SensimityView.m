@@ -3,8 +3,8 @@
 //
 
 #import "SensimityView.h"
-#import "BeaconValidator.h"
 #import "AppDelegate.h"
+#import "BeaconValidator.h"
 
 @interface SensimityView ()
 
@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *errorLabelMajorNumber;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabelMinorNumber;
 @property BOOL running;
-@property (strong, nonatomic) NSMutableArray *autoCompleteArray;
 
 @end
 
@@ -36,66 +35,10 @@
     
     [self addGestureRecognizer:tap];
     
-    [self setAutoCompleteArray];
+    [_uuid refreshAutoCompleteArray];
     [_uuid setDelegate:self];
     [_majorNumber setDelegate:self];
     [_minorNumber setDelegate:self];
-}
-
-- (void) setAutoCompleteArray {
-    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ConfiguredBeacon" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    fetchRequest.propertiesToFetch = [NSArray arrayWithObject:[[entity propertiesByName] objectForKey:@"uuid"]];
-    fetchRequest.returnsDistinctResults = YES;
-    fetchRequest.resultType = NSDictionaryResultType;
-    
-    NSError *error = nil;
-    NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
-    
-    if (error) {
-        NSLog(@"Unable to execute fetch request.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
-        
-    } else {
-        _autoCompleteArray = [[NSMutableArray alloc] init];
-        for (NSManagedObject* object in result) {
-            [_autoCompleteArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[object valueForKey:@"uuid"], @"DisplayText", nil]];
-        }
-    }
-}
-- (NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
-{
-    if ([textField isEqual:self.uuid]) {
-        return _autoCompleteArray;
-    }
-    else{
-        return nil;
-    }
-}
-
-- (BOOL)textFieldShouldSelect:(MPGTextField *)textField
-{
-    return YES;
-}
-
-- (void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result
-{
-    //A selection was made - either by the user or by the textfield. Check if its a selection from the data provided or a NEW entry.
-    if ([[result objectForKey:@"CustomObject"] isKindOfClass:[NSString class]] && [[result objectForKey:@"CustomObject"] isEqualToString:@"NEW"]) {
-        //New Entry
-        [self.uuid setHidden:NO];
-    }
-    else{
-        //Selection from provided data
-        if ([textField isEqual:self.uuid]) {
-            [self.uuid setText:[result objectForKey:@"DisplayText"]];
-        }
-    }
 }
 
 // Start or stop the beaconadvertisement
@@ -123,12 +66,14 @@
     [entity setValue:[_uuid text] forKey:@"uuid"];
     [entity setValue:[NSNumber numberWithInteger:[[_majorNumber text] intValue]] forKey:@"major"];
     [entity setValue:[NSNumber numberWithInteger:[[_minorNumber text] intValue]] forKey:@"minor"];
+    [entity setValue:[[NSDate alloc] init] forKey:@"date"];
     
     NSError *error;
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
-    [self setAutoCompleteArray];
+
+    [_uuid refreshAutoCompleteArray];
 }
 
 - (void) startScanning {
