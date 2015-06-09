@@ -26,6 +26,9 @@
 		E77D101D1B14B36500F80588 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77D0FF01B147BB300F80588 /* Images.xcassets */; };
 		E77D101F1B14B36500F80588 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77D0FEC1B147B6F00F80588 /* Launch Screen.xib */; };
 		E7B86DB71B21D66C002C8A0D /* BeaconValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */; };
+		E7C288401B26F1CE00B7CDC5 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2883F1B26F1CE00B7CDC5 /* MPGTextField.m */; };
+		E7C288431B26F28D00B7CDC5 /* SensimityUUIDField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288421B26F28D00B7CDC5 /* SensimityUUIDField.m */; };
+		E7C2884A1B27059000B7CDC5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7C288481B27059000B7CDC5 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,11 @@
 		E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconValidator.h; path = Validators/BeaconValidator.h; sourceTree = "<group>"; };
 		E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconValidator.m; path = Validators/BeaconValidator.m; sourceTree = "<group>"; };
+		E7C2883E1B26F1CE00B7CDC5 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
+		E7C2883F1B26F1CE00B7CDC5 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
+		E7C288411B26F28D00B7CDC5 /* SensimityUUIDField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityUUIDField.h; sourceTree = "<group>"; };
+		E7C288421B26F28D00B7CDC5 /* SensimityUUIDField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityUUIDField.m; sourceTree = "<group>"; };
+		E7C288491B27059000B7CDC5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E77D10071B14B22F00F80588 /* Controllers */,
+				E7C288441B26F3C700B7CDC5 /* Models */,
 				5060DBEA1847A0A300E99EE6 /* Supporting Files */,
 				E77D10081B14B25100F80588 /* Views */,
 				E7B86DB41B21D5B3002C8A0D /* Validators */,
@@ -128,6 +137,8 @@
 				E77D0FF31B14844200F80588 /* SensimityTextField.m */,
 				E77D0FFF1B149FCE00F80588 /* SensimityView.h */,
 				E77D10001B149FCE00F80588 /* SensimityView.m */,
+				E7C288411B26F28D00B7CDC5 /* SensimityUUIDField.h */,
+				E7C288421B26F28D00B7CDC5 /* SensimityUUIDField.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 		E7813B371B0F63AA00FEFF70 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E7C2883D1B26F1CE00B7CDC5 /* MPGTextField */,
 				E77D10091B14B29900F80588 /* Views */,
 				E77D0FF01B147BB300F80588 /* Images.xcassets */,
 				E7813B381B0F63B100FEFF70 /* Fonts */,
@@ -169,6 +181,23 @@
 				E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */,
 			);
 			name = Validators;
+			sourceTree = "<group>";
+		};
+		E7C2883D1B26F1CE00B7CDC5 /* MPGTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E7C2883E1B26F1CE00B7CDC5 /* MPGTextField.h */,
+				E7C2883F1B26F1CE00B7CDC5 /* MPGTextField.m */,
+			);
+			path = MPGTextField;
+			sourceTree = "<group>";
+		};
+		E7C288441B26F3C700B7CDC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7C288481B27059000B7CDC5 /* Model.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +272,13 @@
 			files = (
 				E7B86DB71B21D66C002C8A0D /* BeaconValidator.m in Sources */,
 				E77D100C1B14B36500F80588 /* SensimityView.m in Sources */,
+				E7C288401B26F1CE00B7CDC5 /* MPGTextField.m in Sources */,
 				E77D100D1B14B36500F80588 /* ViewController.m in Sources */,
 				E77D100E1B14B36500F80588 /* SensimityTextField.m in Sources */,
+				E7C2884A1B27059000B7CDC5 /* Model.xcdatamodeld in Sources */,
 				E77D100F1B14B36500F80588 /* AppDelegate.m in Sources */,
 				E77D10101B14B36500F80588 /* main.m in Sources */,
+				E7C288431B26F28D00B7CDC5 /* SensimityUUIDField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E7C288481B27059000B7CDC5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7C288491B27059000B7CDC5 /* Model.xcdatamodel */,
+			);
+			currentVersion = E7C288491B27059000B7CDC5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5060DBD81847A0A300E99EE6 /* Project object */;
 }

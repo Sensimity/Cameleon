@@ -1,11 +1,11 @@
 //
-//  SensimityTextField.h
+//  SensimityUUIDField.h
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "MPGTextField.h"
 
-@interface SensimityTextField : UITextField
+@interface SensimityUUIDField : MPGTextField
 
 @property (strong, nonatomic) CALayer* bottomBorder;
 
