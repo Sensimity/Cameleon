@@ -6,29 +6,39 @@
 
 @implementation BeaconValidator
 
+#pragma mark - Validators
+
 /**
- * Check a string is a valid UUID
+ *  Check a string is a valid UUID
+ *
+ *  @param UUIDString The string must be validated
+ *
+ *  @return YES if uuid is valid, otherwise it returns NO
  */
 -(BOOL)isValidUUID: (NSString *)UUIDString
 {
     NSUUID* UUID = [[NSUUID alloc] initWithUUIDString:UUIDString];
     if(UUID)
-        return true;
+        return YES;
     else
-        return false;
+        return NO;
 }
 
 /**
- * Check a string is a numeric value
+ *  Validator to check a String is an integer
+ *
+ *  @param numericString The stringing must be validated
+ *
+ *  @return YES if numericstring is an int, otherwise it returns NO
  */
 -(BOOL)isValidInt: (NSString *)numericString
 {
     if ([numericString isEqualToString:@"0"]) {
-        return 1;
+        return YES;
     } else if ([numericString intValue] == 0) {
-        return 0;
+        return NO;
     } else {
-        return 1;
+        return YES;
     }
 }
 

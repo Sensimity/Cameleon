@@ -4,73 +4,69 @@
 
 #import "SensimityUUIDField.h"
 #import "AppDelegate.h"
+#import "ConfiguredBeaconService.h"
+#import "UIColor+ColorExtensions.h"
 
 @interface SensimityUUIDField ()
 
+/**
+ *  The array which contains the autocomplete data
+ */
 @property (strong, nonatomic) NSMutableArray *autoCompleteArray;
 
 @end
 
 @implementation SensimityUUIDField
 
+#pragma mark - Lifecycle
+
 // Add a orange border to the textfields
 - (void)drawRect:(CGRect)rect {
-    _bottomBorder = [CALayer layer];
-    _bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height - 1, self.frame.size.width, 1.0f);
-    _bottomBorder.backgroundColor = [UIColor colorWithRed:0.255 green:0.259 blue:0.255 alpha:1].CGColor;
-    [self.layer addSublayer:_bottomBorder];
-    [self setDelegate:self];
+    self.bottomBorder = [CALayer layer];
+    self.bottomBorder.frame = CGRectMake(0.0f, CGRectGetHeight(self.frame) - 1, CGRectGetWidth(self.frame), 1.0f);
+    self.bottomBorder.backgroundColor = [UIColor sensimityGreyColor].CGColor;
+    [self.layer addSublayer:self.bottomBorder];
+    [self refreshAutoCompleteArray];
 }
 
-// Set regular Sensimity brown color bottom border
+#pragma mark - Custom Accessors
+
+/**
+ *  Function to set the regular border color, it is a darkgrey color
+ */
 - (void) setRegularBorderColor {
-    _bottomBorder.backgroundColor = [UIColor colorWithRed:0.255 green:0.259 blue:0.255 alpha:1].CGColor;
+    self.bottomBorder.backgroundColor = [UIColor sensimityGreyColor].CGColor;
 }
 
-// Set error red color bottom border
+/**
+ * Function to set the red border color to identify the value was wrong
+ */
 - (void) setErrorBorderColor {
-    _bottomBorder.backgroundColor = [UIColor redColor].CGColor;
+    self.bottomBorder.backgroundColor = [UIColor sensimityErrorRedColor].CGColor;
 }
 
+/**
+ *  Get the autocomplete array
+ *
+ *  @return autoCompletedArray
+ */
+- (NSArray *) getAutoCompleteArray {
+    return self.autoCompleteArray;
+}
+
+#pragma mark - Public
+
+/**
+ *  Refresh the array which delivers the autocomplete data
+ */
 - (void) refreshAutoCompleteArray {
-    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ConfiguredBeacon" inManagedObjectContext:context];
-    NSDictionary *entityProperties = [entity propertiesByName];
-    [fetchRequest setEntity:entity];
-    [fetchRequest setPropertiesToFetch:[NSArray arrayWithObject:[entityProperties objectForKey:@"uuid"]]];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO]]];
-    NSArray* result = [context executeFetchRequest:fetchRequest error:nil];
-
-    _autoCompleteArray = [[NSMutableArray alloc] init];
-    for (NSManagedObject* object in result) {
+    ConfiguredBeaconService* configuredBeaconService = [[ConfiguredBeaconService alloc] init];
+    self.autoCompleteArray = [[NSMutableArray alloc] init];
+    for (NSManagedObject* object in [configuredBeaconService getAllConfiguredBeacons]) {
         NSDictionary *autoCompleteItem = [NSDictionary dictionaryWithObjectsAndKeys:[object valueForKey:@"uuid"], @"DisplayText", nil];
-        if (![_autoCompleteArray containsObject:autoCompleteItem]) {
-            [_autoCompleteArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[object valueForKey:@"uuid"], @"DisplayText", nil]];
+        if (![self.autoCompleteArray containsObject:autoCompleteItem]) {
+            [self.autoCompleteArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:[object valueForKey:@"uuid"], @"DisplayText", nil]];
         }
-    }
-}
-
-- (NSArray *)dataForPopoverInTextField:(MPGTextField *)textField
-{
-    return _autoCompleteArray;
-}
-
-- (BOOL)textFieldShouldSelect:(MPGTextField *)textField
-{
-    return YES;
-}
-
-- (void)textField:(MPGTextField *)textField didEndEditingWithSelection:(NSDictionary *)result
-{
-    //A selection was made - either by the user or by the textfield. Check if its a selection from the data provided or a NEW entry.
-    if ([[result objectForKey:@"CustomObject"] isKindOfClass:[NSString class]] && [[result objectForKey:@"CustomObject"] isEqualToString:@"NEW"]) {
-        //New Entry
-        [self setHidden:NO];
-    } else {
-        [self setText:[result objectForKey:@"DisplayText"]];
     }
 }
 

@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="50" id="hF8-IR-roN"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Major id of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-nR-5ql" customClass="SensimityTextField">
+                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Major id of mock beacon" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-nR-5ql" customClass="SensimityTextField">
                     <rect key="frame" x="20" y="254" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>
@@ -46,7 +46,7 @@
                         <outlet property="delegate" destination="-1" id="iWO-vc-g0g"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minor id of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ewf-2x-pEZ" customClass="SensimityTextField">
+                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Minor id of mock beacon" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ewf-2x-pEZ" customClass="SensimityTextField">
                     <rect key="frame" x="20" y="334" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>
@@ -85,7 +85,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="SENSIMITY CHAMELEON" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPi-TH-K7n">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="SENSIMITY CHAMELEON" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPi-TH-K7n">
                     <rect key="frame" x="20" y="95" width="276" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="Msc-ng-16w"/>
@@ -94,14 +94,14 @@
                     <fontDescription key="fontDescription" name="Geogrotesque-Light" family="Geogrotesque" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UUID of mock beacon" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-ti-yfP" customClass="SensimityUUIDField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UUID of mock beacon" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-ti-yfP" customClass="SensimityUUIDField">
                     <rect key="frame" x="20" y="174" width="276" height="30"/>
                     <accessibility key="accessibilityConfiguration" hint="Minor number"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Oos-Gi-nDZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="dYB-kz-11V"/>
                     </connections>

@@ -8,14 +8,20 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface SensimityView : UIView<UITextFieldDelegate, CBPeripheralManagerDelegate>
-
-@property (strong, nonatomic) NSDictionary *myBeaconData;
-@property (strong, nonatomic) CBPeripheralManager *peripheralManager;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@interface SensimityView : UIView<UITextFieldDelegate, MPGTextFieldDelegate, CBPeripheralManagerDelegate>
 
 /**
- * Constructor to sets the delegates and tapgestures
+ *  The beaconInformation which should be broadcasted
+ */
+@property (strong, nonatomic) NSDictionary *beaconData;
+
+/**
+ *  Ths manager which managed the beacon-broadcasting
+ */
+@property (strong, nonatomic) CBPeripheralManager *peripheralManager;
+
+/**
+ *  Constructor to sets the delegates and tapgestures
  */
 - (void) construct;
 

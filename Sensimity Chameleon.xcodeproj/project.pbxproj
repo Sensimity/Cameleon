@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E715AE7D1B286C9900AB0407 /* UIColor+ColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E715AE7C1B286C9900AB0407 /* UIColor+ColorExtensions.m */; };
+		E715AE841B2880D600AB0407 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E715AE7F1B2880D600AB0407 /* TPKeyboardAvoidingScrollView.m */; };
+		E715AE891B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E715AE881B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		E7427EE31B282E4C006DC8E6 /* SensimityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7427EE21B282E4C006DC8E6 /* SensimityTableViewCell.xib */; };
+		E7427EE61B282EB7006DC8E6 /* SensimityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7427EE51B282EB7006DC8E6 /* SensimityTableViewCell.m */; };
+		E7427EEC1B284B5F006DC8E6 /* ConfiguredBeaconService.m in Sources */ = {isa = PBXBuildFile; fileRef = E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */; };
 		E76D1E281B14DA3E00183A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76D1E271B14DA3E00183A5A /* Main.storyboard */; };
 		E77D100C1B14B36500F80588 /* SensimityView.m in Sources */ = {isa = PBXBuildFile; fileRef = E77D10001B149FCE00F80588 /* SensimityView.m */; };
 		E77D100D1B14B36500F80588 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5060DBF91847A0A300E99EE6 /* ViewController.m */; };
@@ -44,6 +50,17 @@
 		5060DBF91847A0A300E99EE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5060DC181847AAB200E99EE6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		5060DC1A1847AAB700E99EE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E715AE7B1B286C9900AB0407 /* UIColor+ColorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorExtensions.h"; sourceTree = "<group>"; };
+		E715AE7C1B286C9900AB0407 /* UIColor+ColorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorExtensions.m"; sourceTree = "<group>"; };
+		E715AE7E1B2880D600AB0407 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		E715AE7F1B2880D600AB0407 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		E715AE871B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		E715AE881B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		E7427EE21B282E4C006DC8E6 /* SensimityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SensimityTableViewCell.xib; sourceTree = "<group>"; };
+		E7427EE41B282EB7006DC8E6 /* SensimityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityTableViewCell.h; sourceTree = "<group>"; };
+		E7427EE51B282EB7006DC8E6 /* SensimityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityTableViewCell.m; sourceTree = "<group>"; };
+		E7427EEA1B284B5F006DC8E6 /* ConfiguredBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfiguredBeaconService.h; path = Services/ConfiguredBeaconService.h; sourceTree = "<group>"; };
+		E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfiguredBeaconService.m; path = Services/ConfiguredBeaconService.m; sourceTree = "<group>"; };
 		E76D1E271B14DA3E00183A5A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E77D0FEC1B147B6F00F80588 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		E77D0FF01B147BB300F80588 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -85,11 +102,7 @@
 		5060DBD71847A0A300E99EE6 = {
 			isa = PBXGroup;
 			children = (
-				E77D10071B14B22F00F80588 /* Controllers */,
-				E7C288441B26F3C700B7CDC5 /* Models */,
-				5060DBEA1847A0A300E99EE6 /* Supporting Files */,
-				E77D10081B14B25100F80588 /* Views */,
-				E7B86DB41B21D5B3002C8A0D /* Validators */,
+				E7427EE71B2836DC006DC8E6 /* Classes */,
 				E7813B371B0F63AA00FEFF70 /* Resources */,
 				5060DBE21847A0A300E99EE6 /* Frameworks */,
 				E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */,
@@ -111,14 +124,42 @@
 		5060DBEA1847A0A300E99EE6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E715AE871B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				E715AE881B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				E715AE7E1B2880D600AB0407 /* TPKeyboardAvoidingScrollView.h */,
+				E715AE7F1B2880D600AB0407 /* TPKeyboardAvoidingScrollView.m */,
 				5060DBF21847A0A300E99EE6 /* AppDelegate.h */,
 				5060DBF31847A0A300E99EE6 /* AppDelegate.m */,
 				E77D10051B14B12C00F80588 /* Beacon-Prefix.pch */,
 				5060DBEB1847A0A300E99EE6 /* Info.plist */,
 				5060DBEC1847A0A300E99EE6 /* InfoPlist.strings */,
 				5060DBEF1847A0A300E99EE6 /* main.m */,
+				E715AE7B1B286C9900AB0407 /* UIColor+ColorExtensions.h */,
+				E715AE7C1B286C9900AB0407 /* UIColor+ColorExtensions.m */,
 			);
-			path = "Supporting Files";
+			name = "Supporting Files";
+			path = "../Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7427EE71B2836DC006DC8E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E77D10071B14B22F00F80588 /* Controllers */,
+				E7C288441B26F3C700B7CDC5 /* Models */,
+				E7427EE91B284B36006DC8E6 /* Services */,
+				E77D10081B14B25100F80588 /* Views */,
+				E7B86DB41B21D5B3002C8A0D /* Validators */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E7427EE91B284B36006DC8E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E7427EEA1B284B5F006DC8E6 /* ConfiguredBeaconService.h */,
+				E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		E77D10071B14B22F00F80588 /* Controllers */ = {
@@ -139,6 +180,8 @@
 				E77D10001B149FCE00F80588 /* SensimityView.m */,
 				E7C288411B26F28D00B7CDC5 /* SensimityUUIDField.h */,
 				E7C288421B26F28D00B7CDC5 /* SensimityUUIDField.m */,
+				E7427EE41B282EB7006DC8E6 /* SensimityTableViewCell.h */,
+				E7427EE51B282EB7006DC8E6 /* SensimityTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +189,7 @@
 		E77D10091B14B29900F80588 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7427EE21B282E4C006DC8E6 /* SensimityTableViewCell.xib */,
 				E76D1E271B14DA3E00183A5A /* Main.storyboard */,
 				E77D0FEC1B147B6F00F80588 /* Launch Screen.xib */,
 				E77D0FFD1B149FB900F80588 /* SensimityView.xib */,
@@ -156,10 +200,11 @@
 		E7813B371B0F63AA00FEFF70 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E7813B381B0F63B100FEFF70 /* Fonts */,
 				E7C2883D1B26F1CE00B7CDC5 /* MPGTextField */,
+				5060DBEA1847A0A300E99EE6 /* Supporting Files */,
 				E77D10091B14B29900F80588 /* Views */,
 				E77D0FF01B147BB300F80588 /* Images.xcassets */,
-				E7813B381B0F63B100FEFF70 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -255,6 +300,7 @@
 				E77D10181B14B36500F80588 /* SourceSansPro-Regular.otf in Resources */,
 				E77D10191B14B36500F80588 /* Geogrotesque-Regular.otf in Resources */,
 				E77D101A1B14B36500F80588 /* SensimityView.xib in Resources */,
+				E7427EE31B282E4C006DC8E6 /* SensimityTableViewCell.xib in Resources */,
 				E76D1E281B14DA3E00183A5A /* Main.storyboard in Resources */,
 				E77D101B1B14B36500F80588 /* Geogrotesque-Light.otf in Resources */,
 				E77D101C1B14B36500F80588 /* InfoPlist.strings in Resources */,
@@ -270,11 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E715AE841B2880D600AB0407 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				E7427EEC1B284B5F006DC8E6 /* ConfiguredBeaconService.m in Sources */,
 				E7B86DB71B21D66C002C8A0D /* BeaconValidator.m in Sources */,
+				E715AE891B28822100AB0407 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				E77D100C1B14B36500F80588 /* SensimityView.m in Sources */,
+				E715AE7D1B286C9900AB0407 /* UIColor+ColorExtensions.m in Sources */,
 				E7C288401B26F1CE00B7CDC5 /* MPGTextField.m in Sources */,
 				E77D100D1B14B36500F80588 /* ViewController.m in Sources */,
 				E77D100E1B14B36500F80588 /* SensimityTextField.m in Sources */,
+				E7427EE61B282EB7006DC8E6 /* SensimityTableViewCell.m in Sources */,
 				E7C2884A1B27059000B7CDC5 /* Model.xcdatamodeld in Sources */,
 				E77D100F1B14B36500F80588 /* AppDelegate.m in Sources */,
 				E77D10101B14B36500F80588 /* main.m in Sources */,

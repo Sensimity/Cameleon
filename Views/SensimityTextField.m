@@ -3,25 +3,38 @@
 //
 
 #import "SensimityTextField.h"
+#import "UIColor+ColorExtensions.h"
 
 @implementation SensimityTextField
 
-// Add a orange border to the textfields
+#pragma mark - Lifecycles
+
+/**
+ *  Add a orange border to the textfields
+ *
+ *  @param rect The rect which should be drawn
+ */
 - (void)drawRect:(CGRect)rect {
-    _bottomBorder = [CALayer layer];
-    _bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height - 1, self.frame.size.width, 1.0f);
-    _bottomBorder.backgroundColor = [UIColor colorWithRed:0.255 green:0.259 blue:0.255 alpha:1].CGColor;
-    [self.layer addSublayer:_bottomBorder];
+    self.bottomBorder = [CALayer layer];
+    self.bottomBorder.frame = CGRectMake(0.0f, CGRectGetHeight(self.frame) - 1, CGRectGetWidth(self.frame), 1.0f);
+    self.bottomBorder.backgroundColor = [UIColor sensimityGreyColor].CGColor;
+    [self.layer addSublayer:self.bottomBorder];
 }
 
-// Set regular Sensimity brown color bottom border
+#pragma mark - Custom Accessors
+
+/**
+ *  Function to set the regular border color, it is a darkgrey color
+ */
 - (void) setRegularBorderColor {
-    _bottomBorder.backgroundColor = [UIColor colorWithRed:0.255 green:0.259 blue:0.255 alpha:1].CGColor;
+    self.bottomBorder.backgroundColor = [UIColor sensimityGreyColor].CGColor;
 }
 
-// Set error red color bottom border
+/**
+ * Function to set the red border color to identify the value was wrong
+ */
 - (void) setErrorBorderColor {
-    _bottomBorder.backgroundColor = [UIColor redColor].CGColor;
+    self.bottomBorder.backgroundColor = [UIColor sensimityErrorRedColor].CGColor;
 }
 
 @end
