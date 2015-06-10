@@ -59,8 +59,8 @@
 		E7427EE21B282E4C006DC8E6 /* SensimityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SensimityTableViewCell.xib; sourceTree = "<group>"; };
 		E7427EE41B282EB7006DC8E6 /* SensimityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityTableViewCell.h; sourceTree = "<group>"; };
 		E7427EE51B282EB7006DC8E6 /* SensimityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityTableViewCell.m; sourceTree = "<group>"; };
-		E7427EEA1B284B5F006DC8E6 /* ConfiguredBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfiguredBeaconService.h; path = Services/ConfiguredBeaconService.h; sourceTree = "<group>"; };
-		E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfiguredBeaconService.m; path = Services/ConfiguredBeaconService.m; sourceTree = "<group>"; };
+		E7427EEA1B284B5F006DC8E6 /* ConfiguredBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredBeaconService.h; sourceTree = "<group>"; };
+		E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredBeaconService.m; sourceTree = "<group>"; };
 		E76D1E271B14DA3E00183A5A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E77D0FEC1B147B6F00F80588 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		E77D0FF01B147BB300F80588 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		E77D10001B149FCE00F80588 /* SensimityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensimityView.m; sourceTree = "<group>"; };
 		E77D10051B14B12C00F80588 /* Beacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beacon-Prefix.pch"; sourceTree = "<group>"; };
 		E7B86DB31B21AB5E002C8A0D /* Beacon copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconValidator.h; path = Validators/BeaconValidator.h; sourceTree = "<group>"; };
-		E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconValidator.m; path = Validators/BeaconValidator.m; sourceTree = "<group>"; };
+		E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconValidator.h; sourceTree = "<group>"; };
+		E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconValidator.m; sourceTree = "<group>"; };
 		E7C2883E1B26F1CE00B7CDC5 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
 		E7C2883F1B26F1CE00B7CDC5 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
 		E7C288411B26F28D00B7CDC5 /* SensimityUUIDField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensimityUUIDField.h; sourceTree = "<group>"; };
@@ -137,8 +137,7 @@
 				E715AE7B1B286C9900AB0407 /* UIColor+ColorExtensions.h */,
 				E715AE7C1B286C9900AB0407 /* UIColor+ColorExtensions.m */,
 			);
-			name = "Supporting Files";
-			path = "../Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E7427EE71B2836DC006DC8E6 /* Classes */ = {
@@ -150,7 +149,7 @@
 				E77D10081B14B25100F80588 /* Views */,
 				E7B86DB41B21D5B3002C8A0D /* Validators */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E7427EE91B284B36006DC8E6 /* Services */ = {
@@ -159,7 +158,7 @@
 				E7427EEA1B284B5F006DC8E6 /* ConfiguredBeaconService.h */,
 				E7427EEB1B284B5F006DC8E6 /* ConfiguredBeaconService.m */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E77D10071B14B22F00F80588 /* Controllers */ = {
@@ -225,7 +224,7 @@
 				E7B86DB51B21D66C002C8A0D /* BeaconValidator.h */,
 				E7B86DB61B21D66C002C8A0D /* BeaconValidator.m */,
 			);
-			name = Validators;
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		E7C2883D1B26F1CE00B7CDC5 /* MPGTextField */ = {
@@ -242,7 +241,7 @@
 			children = (
 				E7C288481B27059000B7CDC5 /* Model.xcdatamodeld */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +272,11 @@
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Sensimity;
+				TargetAttributes = {
+					E77D100A1B14B36500F80588 = {
+						DevelopmentTeam = F48QH95NN7;
+					};
+				};
 			};
 			buildConfigurationList = 5060DBDB1847A0A300E99EE6 /* Build configuration list for PBXProject "Sensimity Chameleon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -424,8 +428,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Supporting Files/Beacon-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "Resources/Supporting Files/Beacon-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				PRODUCT_NAME = "Beacon copy";
 				PROVISIONING_PROFILE = "";
@@ -441,8 +445,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Supporting Files/Beacon-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "Resources/Supporting Files/Beacon-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				PRODUCT_NAME = "Beacon copy";
 				PROVISIONING_PROFILE = "";
