@@ -430,7 +430,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/Supporting Files/Beacon-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				PRODUCT_NAME = "Beacon copy";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,7 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/Supporting Files/Beacon-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				PRODUCT_NAME = "Beacon copy";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
